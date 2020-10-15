@@ -12,7 +12,7 @@ namespace TestAlgoExpert
 
         
         [Test]
-        public void Test1()
+        public void TestRiver1()
         {
             int [,] matrix = {  {1,0,0,1,0 },
                                 {1,0,1,0,0 },
@@ -27,7 +27,7 @@ namespace TestAlgoExpert
             
         }
         [Test]
-        public void Test2()
+        public void TestRiver2()
         {
             int[,] matrix = {   {1,0,0,0,0 },
                                 {1,0,0,0,0 },
@@ -39,6 +39,19 @@ namespace TestAlgoExpert
             var rivers = new Rivers();
             var received = rivers.Solve(matrix);
             Assert.AreEqual(expected.Length, received.Length);
+
+        }
+        //[TestCase(2,1)]
+       
+        [TestCase(2,1)]
+        
+        [TestCase(6, 5)]
+       
+        [Test]
+        public void TestNtFib1(int val, int expected)
+        {
+
+            Assert.AreEqual(expected, NThFibonacci.GetNthFib(val));
 
         }
     }
