@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAlgoExpert", "TestAlgoExpert\TestAlgoExpert.csproj", "{7158EB20-7E76-41C6-91E9-963911BE06DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problems", "Problems\Problems.csproj", "{9525370F-7DC6-4614-AFE3-C61DC205FD13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7158EB20-7E76-41C6-91E9-963911BE06DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7158EB20-7E76-41C6-91E9-963911BE06DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7158EB20-7E76-41C6-91E9-963911BE06DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7158EB20-7E76-41C6-91E9-963911BE06DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9525370F-7DC6-4614-AFE3-C61DC205FD13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9525370F-7DC6-4614-AFE3-C61DC205FD13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9525370F-7DC6-4614-AFE3-C61DC205FD13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9525370F-7DC6-4614-AFE3-C61DC205FD13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C87D8A32-9FEC-4AAC-A844-4E70B0D889A1}
+	EndGlobalSection
+EndGlobal
