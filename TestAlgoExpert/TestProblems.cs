@@ -54,5 +54,15 @@ namespace TestAlgoExpert
             Assert.AreEqual(expected, NThFibonacci.GetNthFib(val));
 
         }
+
+        [TestCase(0,7, 1,11,3,0,15,5,2,4,10,7,12,6)]
+        [Test]
+        public void TestLargestRange(int expectedStart, int expectedEnd, params int [] input)
+        {
+            var retVal = LargestRange.GetLargestRange(input);
+            Assert.AreEqual(expectedStart, retVal[0]);
+            Assert.AreEqual(expectedEnd  , retVal[1]);
+
+        }
     }
 }
