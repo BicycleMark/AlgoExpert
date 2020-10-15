@@ -13,7 +13,20 @@ namespace Problems
         public static int[] GetLargestRange(int[] array)
         {
             int[] bestRange = new int[2];
-            
+            if (array.Length <= 1)
+            {
+                bestRange[0] = array[0];
+                bestRange[1] = array[0];
+                return bestRange;
+            }
+            if (array.Length <= 2)
+            {
+                array = array.OrderBy(x => x).ToArray();
+                bestRange[0] = array[0];
+                bestRange[1] = array[1];
+                return bestRange;
+            }
+
             Dictionary<int,bool> nums = new Dictionary<int,bool>();
             foreach (var n in array)
             {
