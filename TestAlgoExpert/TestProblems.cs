@@ -1,5 +1,8 @@
 using NUnit.Framework;
 using Problems;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace TestAlgoExpert
 {
@@ -63,6 +66,34 @@ namespace TestAlgoExpert
             var retVal = LargestRange.GetLargestRange(input);
             Assert.AreEqual(expectedStart, retVal[0]);
             Assert.AreEqual(expectedEnd  , retVal[1]);
+
+        }
+
+        int [] Parse(string str)
+        {
+            //return str.Select(int.Parse).ToArray();
+            var s = str.Split(',');
+            List<int> lst = new List<int>();
+            foreach (var item in s)
+            {
+                lst.Add(int.Parse(item));
+            }
+            return lst.ToArray();
+        }
+
+        [TestCase("11,-1", 10, 3, 5, -4, 8, 11, 1, -1, 6)]
+        
+        [Test]
+        public void TestTwoNumberSum(string expectedValuesCsv ,
+                                        int  targetSum,
+                                        params int[] input)
+        {
+            var expected = Parse(expectedValuesCsv);
+            var val = ProblemTwoNumberSum.TwoNumberSum(input, targetSum);
+            Assert.AreEqual(expected[0], val[0]);
+            Assert.AreEqual(expected[1], val[1]);
+
+
 
         }
     }
