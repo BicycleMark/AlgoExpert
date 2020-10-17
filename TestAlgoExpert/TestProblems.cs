@@ -1,3 +1,5 @@
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using Problems;
 using System;
@@ -175,6 +177,38 @@ namespace TestAlgoExpert
             {
                 Assert.AreEqual(n, topVals[i++]);
             }
+        }
+    }
+    
+
+    [TestFixture]
+    public class TestThreeSum
+    {
+        public class Input
+        {
+            [JsonProperty("array")]
+            public IList<int> Array { get; set; }
+
+            [JsonProperty("targetSum")]
+            public int TargetSum { get; set; }
+        }
+        public class Result
+        {
+            [JsonProperty("expected")]
+            public IList<IList<int>>Array { get; set; }
+        }
+        [TestCase("{'expected':[[-8, 2, 6 ],[-8, 3, 5],[ -6, 1, 5 ]]}",
+                  "{'array': [12, 3, 1, 2, -6, 5, -8, 6] ,'targetSum': 0}")]
+        [Test]
+        public void TestThreeNumberSum(string strExpected, string input)
+        {
+            Input testData = JsonConvert.DeserializeObject<Input>(input);
+            Result expected = JsonConvert.DeserializeObject<Result>(strExpected);
+
+            var lst =  ThreeNumberSumQuestion.ThreeNumberSum(testData.Array.ToArray(), 
+                                                             testData.TargetSum);
+
+            Assert.AreEqual(expected.Array.Count, lst.Count);
         }
     }
 }
